@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style/portfolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="light-mode">
+    <div id="header">
+        <div id="logo">
+            <h1><span style="color:var(--clr-led-text); text-shadow: var(--clr-shadow-text)">I</span>van.</h1>
+        </div>
+        <div id="navigation">
+
+            <nav>
+                <button class="nav-button" onclick="showMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg></button>
+                <ul class="nav-list nav-hidden">
+                    <li><button onclick="darkmode(event)" style="background-color: var(--clr-surface);color: var(--clr-text);">Enable Dark Mode</button></li>
+                    <li><a href="#home" class="no-deco">home</a></li>
+                    <li><a href="#about" class="no-deco">about</a></li>
+                    <li><a href="#services" class="no-deco">services</a></li>
+                    <li><a href="#portfolio" class="no-deco">portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="body">
+        <div class="page-block" style="align-items: center;" id="home">
+            <div class="block-child">
+                <h2 style="font-size: large;font-family: math;">Front-end/Back-end</h2>
+                <h1 class="ff-h1">Hi, I'm <span style="color:var(--clr-led-text); text-shadow:var(--clr-shadow-text)">Ivan</span><br>Your Web Dev</h1>
+                
+            </div>
+            <div class="block-child" style="overflow: hidden;">
+                <img src="./images/profile/port_profile.png" style="width: 600px;border-radius: 100%;
+                background: linear-gradient(85deg, black, transparent);">
+            </div>
+        </div>
+        <div class="page-block" id="about">
+            <div class="context">
+                <h1 class="ff-h1">About Me</h1>
+            </div>
+            <div class="content grid-3column">
+                <div class="grid-3cl-profile">
+                    <img src="./images/profile/profile.jpg" style="width: 100%;border-radius: 6px;">
+                </div>
+                <div class="grid-3cl-details">
+                    <p class="tab-description">Hello, I'm Ivan, an enthusiastic software developer pursuing a degree in Information Technology with a focus on Web Development. My journey started with a passion for solving real-world challenges through code, evolving from a hobby to a lifelong commitment. Proficient in Node.js, JavaScript, a bit in Java and PHP, I've contributed to impactful projects, such as developing a personal invoicing application tailored for specific services. Specializing in both Front-end and Backend development, I prioritize writing clean, maintainable code. Currently exploring Microservices for the backend and Third-party APIs, I value effective collaboration and seek to enhance my experience in dynamic team environments. Beyond coding, I find joy in learning and being part of a group with shared goals. Excited about the possibilities, I'm eager to bring my skills to build more impactful and durable applications. Let's connect and explore the exciting potential of technology together!</p>
+                    <div class="tab-titles">
+                        <p class="tab-title selected-tab" onclick="tab_title(event, 'skills')">Skills</p>
+                        <p class="tab-title" onclick="tab_title(event, 'experience')">Experience</p>
+                        <p class="tab-title" onclick="tab_title(event,'education')">Education</p>
+                    </div>
+                    <div class="tab-contents tab-content-actv" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Designing Web Interface with interactive behavior</li>
+                            <li><span>Database Design</span><br>Designing Structured database</li>
+                            <li><span>Backend Development</span><br>Designing API and servers</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Trucking Services App</span><br>Built a billing application for trucking services</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>BSIT from Systems Technology Institute</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="page-block" id="services">
+            <div class="context">
+                <h1 class="ff-h1">My Services</h1>
+            </div>
+            <div class="content grid-2x2">
+                <div class="service-card service-web">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square service-icon" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+                    </svg>
+                    <h2 class="service-name">Web Design</h2>
+                    <p class="service-description">Proficient in HTML, CSS, and JavaScript, with practical experience in server-side technologies like Node.js and PHP. Capable of interacting with MySQL databases and designing APIs. Familiar with socket.io for implementing real-time communication using WebSockets.</p>
+                </div>
+                <div class="service-card service-user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill service-icon" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                    </svg>
+                    <h2 class="service-name">Front-end Design</h2>
+                    <p class="service-description">Proficient in creating interactive and dynamic user interface using Javascript, CSS, HTML, and Bootstrap.</p>
+                </div>
+                <div class="service-card service-backend">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill service-icon" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </svg>
+                    <h3 class="service-name">Back-end Design</h3>
+                    <p class="service-description">Knowledgeable in API usage for data fetch and interaction with MySQL databases. Familiar with designing tokens using JWT and creating services using Docker, NGINX, socket.io, and Redis for WebSocket functionality. </p>
+                </div>
+            </div>
+        </div>
+        <div class="page-block" id="portfolio">
+            <div class="context">
+                <h1 class="ff-h1">My Projects</h1>
+            </div>
+            <div class="content">
+                <div id="projects-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#projects-carousel" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/projects/hardbill.png" alt="hardbill image for personal invoice" class="d-block" >
+                            <div class="carousel-caption">
+                                <h6 class="dark-text">Hardbill(Personal invoice)</h6>
+                                <a href="https://ivanprejoles.github.io/hardbill/" class="no-deco dark-text" target="_blank">Redirect to the Page</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/projects/consignc2c.png" alt="consignc2c image for online consignment" class="d-block" >
+                            <div class="carousel-caption">
+                                <h6 class="dark-text">Web Hosting(Consignment Application)</h6>
+                                <a href="https://consignc2c.com/views/c2cpage.html" class="no-deco dark-text" target="_blank">Redirect to the Page</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/projects/collabApp.png" alt="collabApp image for group messaging with collaboration text editor and image sharing" class="d-block" >
+                            <div class="carousel-caption">
+                                <h6 class="dark-text">Collaboration Application</h6>
+                                <a href="https://github.com/ivanprejoles/collaboration-application" class="no-deco dark-text" target="_blank">Redirect to the Project</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/projects/collabApp(microservices).png" alt="collabApp microservice image for group messaging with collaboration text editor and image sharing" class="d-block">
+                            <div class="carousel-caption">
+                                <h6 class="dark-text">Collaboration Application Microservice</h6>
+                                <a href="https://github.com/ivanprejoles/collaboration-application-microservice/tree/main" class="no-deco dark-text" target="_blank">Redirect to the Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#projects-carousel" data-bs-slide="prev" >
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#projects-carousel" data-bs-slide="next" >
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/customAlert.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/navigation.js"></script>
+    <script src="script/pagemode.js"></script>
+</body>
+</html>
